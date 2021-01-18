@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.activity_input_textlayout.*
 
+/**
+ *  参考链接： https://blog.csdn.net/u012792686/article/details/73089227
+ */
 class InputTextLayoutActivity :AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,11 +18,17 @@ class InputTextLayoutActivity :AppCompatActivity(){
     }
 
     private fun initTextInputLayout(){
-        til.editText?.addTextChangedListener(MyTextWatcher("长度应低于10位数!",til))
+        til_account.editText?.addTextChangedListener(MyTextWatcher("长度应低于10位数!",til_account))
         //开启计数
-        til.isCounterEnabled = true
+        til_account.isCounterEnabled = true
         //最大输入限制数
-        til.counterMaxLength = 10
+        til_account.counterMaxLength = 10
+
+        til_verify.editText?.addTextChangedListener(MyTextWatcher("长度应低于10位数!",til_verify))
+        //开启计数
+        til_verify.isCounterEnabled = true
+        //最大输入限制数
+        til_verify.counterMaxLength = 10
     }
 
     class MyTextWatcher( var errorStr :String?,var textInputLayout : TextInputLayout) : TextWatcher {

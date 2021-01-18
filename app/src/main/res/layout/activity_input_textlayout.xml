@@ -2,26 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til"
+        android:id="@+id/til_account"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#000"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <EditText
             android:id="@+id/et_account"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="请输入账号" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_verify"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#000"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入验证码" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <EditText
+        android:layout_marginTop="30dp"
         android:id="@+id/tv_pwd"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="请输入密码" />
     <Button
+        android:layout_marginTop="30dp"
         android:id="@+id/btn_login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
